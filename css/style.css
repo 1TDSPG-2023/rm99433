@@ -1,0 +1,82 @@
+@import url(./reset.css);
+
+:root{
+    --cor-de-fundo: rgba(70, 70, 204, 0.74);
+    --cor-de-icone: rgba(104, 104, 190, 0.562);
+    --cor-de-header: rgba(3, 3, 29, 0.24);
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+    box-sizing: border-box;
+    
+}
+header{
+    width: 100%;
+    background-color: var(--cor-de-header);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.imagem_logo{
+    width: 150px;
+    height: 150px;
+}
+
+.nav_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
+.link_header{
+    background-color: var(--cor-de-icone) ;
+    padding: 30px;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    background-color: var(--cor-de-icone);
+    padding:  0 auto;
+}
+
+
+.lobinhos{
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 0 auto;
+    ;
+
+}
+.lobo_link{
+    width: 30%;
+    height: 30%;
+}
+
+/* BREAKPOINT     */
+@media(max-width:400px){
+    .imagem_logo{
+        width: 100px;
+        height: 100px;
+    }
+    .nav_header{
+        gap: 10px;
+    }
+    .link_header{
+        font-size: 10px;
+        
+    }
+
+
+
+}
