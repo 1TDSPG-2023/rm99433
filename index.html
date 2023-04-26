@@ -1,21 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>teste</title>
+    <title>Layout Flex</title>
+    <link rel="stylesheet" href="./css/estilo.css">
 </head>
 <body>
-    <header>
-        <img src="./img/logo.png" alt="imagem logo">
+
+    <header class="cabecalho">
+        <img src="./img/logo.png" alt="Monitor de Compuiter">
         <nav>
-            <a href="#"class="">item1</a>
-            <a href="#"class="">item1</a>
+            <a href="#">Item-1</a>
+            <a href="#">Item-1</a>
+            <a href="#">Item-1</a>
         </nav>
     </header>
-    <main></main>
-    <footer></footer>
+
+    <h2 class="tit-sec" >Sessão de Fotos</h2>
+    <section class="conteudo">
+        <div>
+            <img src="./img/lobo1.jpg" alt="Lobo">
+            <p>Pidao 1</p>
+        </div>
+        <div>
+            <img src="./img/lobo2.jpg" alt="Lobo">
+            <p>Pidao 2</p>
+        </div>
+        <div>
+            <img src="./img/lobo3.jpg" alt="Lobo">
+            <p>Pidao 3</p>
+        </div>
+        <div>
+            <img src="./img/lobo4.jpg" alt="Lobo">
+            <p>Pidao 4</p>
+        </div>
+        <div>
+            <img src="./img/lobo5.jpg" alt="Lobo">
+            <p>Pidao 5</p>
+        </div>
+        <div>
+            <img src="./img/lobo6.jpg" alt="Lobo">
+            <p>Pidao 6</p>
+        </div>
+
+    </section>
+
+    <footer class="rodape">
+        <h1>Fale Conosco</h1>
+        <nav><a href="#"><img src="./img/social-1.png" alt="Logo"></a>
+            <a href="#"><img src="./img/social-2.png" alt="Logo"></a>
+            <a href="#"><img src="./img/social-3.png" alt="Logo"></a>
+        </nav>
+
+        <div>
+            <form action="index.html" method="get" onsubmit="return false">
+                <fieldset>
+                    <legend>Contato</legend>
+                    <div>
+                        <label for="idNm">Nome</label>
+                        <input type="text" name="txtNm" id="idNm" placeholder="Nome">
+                    </div>
+                    <div>
+                        <label for="idEmail">Email</label>
+                        <input type="email" name="txtEmail" id="idEmail" placeholder="Email">
+                    </div>
+                    <div>
+                        <input type="submit" value="Enviar">
+                    </div>
+
+                </fieldset>
+
+            </form>
+        </div>
+
+        
+    </footer>
+    
 </body>
 </html>

@@ -1,0 +1,40 @@
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;/*pra quando diminuir a tela descer o item*/
+    background-color: black;
+}
+
+.cabecalho img{
+    width: 30%;
+    max-width: 30%;/*pra travar um tamanho certo da imagem*/
+    display: block;
+}
+
+.cabecalho nav{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.cabecalho a{
+    text-decoration: none;
+    font-size: 4em;
+    
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    padding: 20% 0;
+
+}
+
+/*utilizando a pseudo classe hover*/
+
+.cabecalho a:hover{
+    background-color: white;
+    color: black;
+}

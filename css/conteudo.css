@@ -1,0 +1,29 @@
+/*
+    Determine para a class conteudo
+    Display Flex
+    Adicione a propriedade FLex Wrap:wrap
+    Largura máxima de 800px
+    Margin: top e bottom:0/ Left e Rigth auto
+
+    VW= view width - nao recomendado para imagem pois pode distorcer a imagem
+    vh= view height - nao recomendado para imagem
+
+*/
+
+.conteudo{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+.conteudo >div>img{
+    max-width: 100%;
+    display: block;
+}
+
+.conteudo >div{
+    flex-grow: 1;/*imagem crescer junto cm a pagina*/
+    flex-shrink: 1;/*encolher junto com a pagina*/
+    flex-basis: 300px;
+}
