@@ -1,53 +1,41 @@
-//gerando token com math.
-let curiosoGerado = Math.random().toString(16).substring(2);
+//let listaDeUsuarios = [
+ //   {
+ //       nomeUsuario: "john",
+//      nomeCompleto: "John da Silva",
+ //       senhaUsuario: "12345"
+ //   },
+  //  {   
+  //      nomeUsuario: "paulo",
+  //      nomeCompleto: "paulo da Silva",
+  //      senhaUsuario: "12345"
+//
+ //   }
+//
+//];
 
+//GUARDAR A LISTA DE OBJETOS NO LOCAL-STORAGE
+localStorage.setItem( "listaUser",  JSON.stringify(listaDeUsuarios));
 
-//declarando objetos
-const usuario1 = {
-    nomeUsuario: "deden", 
-    senhaUsuario: "12345",
-    gravarDados: true,
-    curioso: curiosoGerado,
-
-}
-
-
-//gerando token com math.
-let curiosoGerado2 = Math.random().toString(16).substring(2);
-
-
-//declarando objetos
-const usuario2 = {
-    nomeUsuario: "gege", 
-    senhaUsuario: "12345",
-    gravarDados: true,
-    curioso: curiosoGerado2,
-}
-
-
-//da pra colocar atributos dinamicamente
-let objetoMaluco = "quero adicionar dentro do objeto1"
-usuario1[objetoMaluco] = "12"
-// logo objetoMaluco = 12
-
-//-------------------------------------------------------------------------------^criação usuarios
-let listaDeUsuarios = [];
-listaDeUsuarios.push(usuario1);
-listaDeUsuarios.push(usuario2);
-//usuarios colocados dentro 
+//------------------------------------------------------------------------------^criação usuarios
 
 
 
 addEventListener("click" , (evt)=> {
+    const user = document.querySelector("#user");
+    const pass = document.querySelector("#pass");
     if(evt.target.id == "botao"){
-        const user = document.querySelector("#user");
-        const pass = document.querySelector("#pass");
+        
         
         
         
         
         
         try{
+            //recuperar a lista de usuários do localStorage
+            let listaDeUsuarios = JSON.parse(localStorage.getItem("listaUser"));
+
+
+
             listaDeUsuarios.forEach((usuario)=>{
 
                 if(user.value == usuario.nomeUsuario && pass.value == usuario.senhaUsuario){
@@ -58,7 +46,7 @@ addEventListener("click" , (evt)=> {
         throw "NÃO VALIDADO"
             
 
-} catch(msg){
+}   catch(msg){
         const msgError = document.querySelector("#msgError");
         if(msg == "VALIDADO"){
             msgError.setAttribute("style","color:#00ff00;");
@@ -68,9 +56,21 @@ addEventListener("click" , (evt)=> {
             msgError.setAttribute("style", "color:#ff0000;");
             msgError.innerHTML = "<span><strong> Usuário ou senha incorreta </strong></span>";
 
-    }
+    }}
+    }else if(evt.target.className == "fa fa-eye" || evt.target.className == "fa fa-eye-slash"){
+        
+        if(pass.getAttribute("type") == "password"){
+            evt.target.setAttribute("class","fa fa-eye-slash")
+            pass.setAttribute("type","text");
+        }else{
+            evt.target.setAttribute("class","fa fa-eye")
+            pass.setAttribute("type","password");
+                
+            }
 
-    }}})
+
+    }
+})
 
     
 
